@@ -55,8 +55,8 @@ function mostrar_mensajes_error($errores)
 
 function comprobar_isograma($cad)
 {
-    $cad = strtolower($cad);
-    foreach (str_split($cad) as $caracter) {
+    $cad = mb_strtolower($cad);
+    foreach (mb_str_split($cad) as $caracter) {
         if ((mb_substr_count($cad, $caracter)) > 1) {
             return 'NO';
         }
